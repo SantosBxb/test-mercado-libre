@@ -1,0 +1,32 @@
+@import './variables';
+
+.button {
+  background-color: $secondary;
+  border: 0;
+  border-radius: 4px;
+  padding: $spacing-100;
+  color: white;
+  font-family: inherit;
+  line-height: 1;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    background-color: darken($secondary, 10%);
+  }
+
+  &:focus {
+    background-color: darken($secondary, 10%);
+    outline: none;
+    box-shadow: 0 0 0 3px lighten($secondary, 25%);
+  }
+
+  &:active {
+    background-color: darken($secondary, 20%);
+  }
+
+  &[disabled] {
+    background-color: $gray-100;
+    color: $gray-300;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,119 @@
+@import './variables';
+
+.itemContainer {
+  padding: $spacing-200;
+
+  .flexContainer {
+    display: flex;
+  }
+
+  .item__image {
+    flex: 1 1 500px;
+    max-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .item__info {
+    flex: 1 1 300px;
+    margin-left: $spacing-100;
+  }
+
+  .item__condition {
+    font-size: $font-200;
+  }
+
+  .item__title {
+    margin-top: $spacing-100;
+    font-size: $font-500;
+  }
+
+  .item__price {
+    font-size: $font-700;
+    margin: $spacing-200 0;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      padding-top: 0.25em;
+      padding-left: 0.25em;
+      vertical-align: top;
+      font-size: $font-500;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .item__description {
+    margin-top: $spacing-200 * 2;
+    max-width: 70ch;
+
+    h3 {
+      color: $gray-400;
+      font-size: $font-600;
+      margin-bottom: $spacing-200;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    .flexContainer {
+      flex-direction: column;
+    }
+
+    .item__image {
+      margin-bottom: $spacing-200;
+    }
+
+    .item__info {
+      flex: 0;
+      margin-left: 0;
+    }
+
+    .item__price {
+      margin: $spacing-100 0;
+    }
+
+    .item__description {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    .item__title {
+      font-size: $font-400;
+      line-height: 1.5;
+    }
+
+    .item__price {
+      font-size: $font-600;
+
+      span {
+        font-size: $font-300;
+      }
+    }
+
+    .item__description h3 {
+      font-size: $font-500;
+      margin-bottom: $spacing-100;
+    }
+  }
+}
+
+.paragraph {
+  font-size: $font-300;
+  color: $gray-200;
+
+  & + & {
+    margin-top: 1.5em;
+  }
+}

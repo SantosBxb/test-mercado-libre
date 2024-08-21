@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+:root {
+  --gray-100: #eee;
+  --gray-200: #999;
+  --spacing-100: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Proxima Nova', Helvetica, Arial, sans-serif;
+  background-color: var(--gray-100);
+  word-break: break-word;
+}
+
+main {
+  background-color: white;
+  padding: var(--spacing-100);
+  margin-bottom: 3em;
+}
+
+.hidden {
+  display: none;
+}

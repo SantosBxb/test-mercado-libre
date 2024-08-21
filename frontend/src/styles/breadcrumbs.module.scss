@@ -1,0 +1,27 @@
+@import './variables';
+
+.listBreadcrumbs {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 1rem;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0 0.2rem;
+    font-size: 0.87rem;
+    color: $gray-400;
+
+    &::after {
+      content: ' > ';
+    }
+
+    &:last-child {
+      font-weight: bold;
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

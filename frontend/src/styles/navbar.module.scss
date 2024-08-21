@@ -1,0 +1,15 @@
+@import './variables';
+
+.navbar {
+  background-color: $yellow;
+  text-align: center;
+
+  & > div:only-child {
+    display: flex;
+    align-items: center;
+  }
+
+  form {
+    margin-left: $spacing-200;
+  }
+}
