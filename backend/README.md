@@ -26,13 +26,22 @@ This is the backend service of the application, built using Node.js, Express, an
    npm install
    ```
 
-2. Start the development server:
+2. (Optional) Create a .env file in the root directory with the following environment variables:
+
+   ```
+   PORT=3001
+   MERCADO_LIBRE_API=https://api.mercadolibre.com
+   ```
+
+   If the .env file is not provided, the application will use the default values (PORT=3001 and MERCADO_LIBRE_API=https://api.mercadolibre.com).
+
+3. Start the development server:
 
    ```
    npm run dev
    ```
 
-3. The backend service will be running on `http://localhost:3001`.
+4. The backend service will be running on `http://localhost:3001`.
 
 ## Scripts
 

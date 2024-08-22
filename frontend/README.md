@@ -26,13 +26,21 @@ This is the frontend service of the application, built using Next.js, TypeScript
    npm install
    ```
 
-2. Start the development server:
+2. (Optional) Create a .env file in the root directory with the following environment variables:
+
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:3001
+   ```
+
+   If the .env file is not provided, the application will use the default values (NEXT_PUBLIC_API_URL=http://localhost:3001).
+
+3. Start the development server:
 
    ```
    npm run dev
    ```
 
-3. Open your browser and visit `http://localhost:3000` to see the application.
+4. Open your browser and visit `http://localhost:3000` to see the application.
 
 ## Scripts
 
