@@ -25,14 +25,18 @@ export default function SearchBar() {
     }
   }, [searchParams]);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const isValidQuery = () => {
     const draftQuery = query.toLowerCase().trim();
     const currentQuery = searchParams.get('q')?.toLowerCase()?.trim();
-    if (draftQuery && currentQuery != draftQuery) {
-      router.push(`/items?q=${draftQuery}`);
+    return draftQuery && currentQuery !== draftQuery;
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (isValidQuery()) {
+      router.push(`/items?q=${query}`);
     }
-  }
+  };
 
   return (
     <form
@@ -49,7 +53,7 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit" title="Buscar">
+      <button type="submit" title="Buscar" disabled={!isValidQuery()}>
         <Image src="/search.png" alt="Buscar" width={20} height={20} />
       </button>
     </form>

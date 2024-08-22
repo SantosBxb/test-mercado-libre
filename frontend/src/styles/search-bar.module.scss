@@ -36,7 +36,8 @@
   button {
     width: 50px;
     align-self: stretch;
-    background-color: $gray-100;
+    background-color: white;
+    opacity: 80%;
     border: none;
     border-radius: 0 4px 4px 0;
     display: flex;
@@ -50,8 +51,8 @@
       cursor: pointer;
     }
 
-    &:active {
-      background-color: darken($secondary, 20%);
+    &:disabled {
+      opacity: 100%;
     }
   }
 
