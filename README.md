@@ -109,4 +109,3 @@ The repository is divided into two main directories:
 - **backend**: Contains the code for the backend service.
 
 Each service has its own README.md file with more detailed information about its structure, dependencies, and usage.
-# test-mercado-libre
